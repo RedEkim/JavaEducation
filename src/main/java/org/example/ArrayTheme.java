@@ -655,35 +655,94 @@ public class ArrayTheme {
         // Методы
         // Объявляем методы
         // Задача
-        System.out.println("Робот-помощник v1.0.");
+//        System.out.println("Робот-помощник v1.0.");
+//    }
+//
+//    public static void welcomeUserByName() { // Объявите метод welcomeUserByName
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Как вас зовут?");
+//        String name = scanner.nextLine(); // Сохраните введённое пользователем имя в переменную name
+//        System.out.println("Рад познакомиться, " + name + "!");
+//    }
+//
+//    public static void sayHelloByTime() { // Объявите метод sayHelloByTime
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Который час?"); // Спросите у пользователя "Который час?" и сохраните ответ в переменную currentHour
+//        int currentHour = scanner.nextInt(); // В зависимости от времени предусмотрите печать приветствий
+//        if (currentHour < 6) {
+//            System.out.println("Доброй ночи!");
+//        } else if (currentHour < 12) {
+//            System.out.println("Доброе утро!");
+//        } else if (currentHour < 18) {
+//            System.out.println("Добрый день!");
+//        } else if (currentHour < 22) {
+//            System.out.println("Добрый вечер!");
+//        } else {
+//            System.out.println("Доброй ночи!");
+//        }
+//    }
+//
+//    public static void printSuccess() { // Объявите метод printSuccess
+//        System.out.println("У вас уже неплохо получается программировать!"); // Он должен печатать строку: У вас уже неплохо получается программировать!
+//    }
+        // Вызываем методы
+        // Задача
+        // Ваш робот уже умеет знакомиться, здороваться в зависимости от времени суток и хвалить за успехи в программировании. Научите его ещё начинать общение с короткого приветствия и спрашивать у пользователя, из какого он города. Сделайте это с помощью методов sayHello() и printCity(). Результат должен получиться таким:
+        //Привет!
+        //Который час?
+        //> ввод текущего часа
+        //Добрый день! (один из вариантов)
+        //Как вас зовут?
+        //> ввод имени
+        //Из какого вы города?
+        //> ввод города
+        //Рад познакомиться, <ваше имя> из <вашего города>!
+        //У вас уже неплохо получается программировать!
+
+        System.out.println("Робот-помощник v2.0.");
+        // Вызовите ниже методы в правильном порядке
+        sayHello();
+        sayHelloByTime();
+        welcomeUserByName();
+        printSuccess();
     }
 
-    public static void welcomeUserByName() { // Объявите метод welcomeUserByName
+    public static void welcomeUserByName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Как вас зовут?");
-        String name = scanner.nextLine(); // Сохраните введённое пользователем имя в переменную name
-        System.out.println("Рад познакомиться, " + name + "!");
+        String name = scanner.nextLine();
+        System.out.println("Из какого вы города?");
+        String city = scanner.nextLine(); // Допишите чтение города
+        System.out.println("Рад познакомиться, " + name + " из " + city + "!");
     }
 
-    public static void sayHelloByTime() { // Объявите метод sayHelloByTime
+    public static void printSuccess() {
+        System.out.println("У вас уже неплохо получается программировать!");
+    }
+
+    public static void sayHello() {
+        System.out.println("Привет!");
+    } // Допишите метод sayHello(), который печатает: Привет!
+
+    public static void printCity() {
+        System.out.println("Из какого вы города?");
+    } // Допишите метод printCity(), который печатает: Из какого вы города?
+
+    public static void sayHelloByTime() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Который час?"); // Спросите у пользователя "Который час?" и сохраните ответ в переменную currentHour
-        int currentHour = scanner.nextInt(); // В зависимости от времени предусмотрите печать приветствий
+        System.out.println("Который час?");
+        int currentHour = scanner.nextInt();
         if (currentHour < 6) {
+            System.out.println("Доброй ночи!");
+        } else if (currentHour > 22) {
             System.out.println("Доброй ночи!");
         } else if (currentHour < 12) {
             System.out.println("Доброе утро!");
         } else if (currentHour < 18) {
             System.out.println("Добрый день!");
-        } else if (currentHour < 22) {
-            System.out.println("Добрый вечер!");
         } else {
-            System.out.println("Доброй ночи!");
+            System.out.println("Добрый вечер!");
         }
-    }
-
-    public static void printSuccess() { // Объявите метод printSuccess
-        System.out.println("У вас уже неплохо получается программировать!"); // Он должен печатать строку: У вас уже неплохо получается программировать!
     }
 }
 
