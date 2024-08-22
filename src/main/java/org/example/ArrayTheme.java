@@ -776,28 +776,41 @@ public class ArrayTheme {
         // Особенности оператора return
         // Task
         // Перед вами код приложения, которое умеет давать пользователю советы о покупке долларов и евро в зависимости от их курса. Однако сейчас код не запускается — в нём допущены ошибки. Вам необходимо исправить их. Учтите, что после выполнения команд с выводом советов программа должна ещё раз запрашивать у пользователя ввод команды. При выборе команды «Выход» приложение должно завершить работу.
-        System.out.println("Привет!");
-
-        doCommand();
+//        System.out.println("Привет!");
+//
+//        doCommand();
+//    }
+//    public static void doCommand() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        while (true) {
+//            System.out.println("Что вы хотите сделать?");
+//            System.out.println("1 - Получить совет о покупке евро");
+//            System.out.println("2 - Получить совет о покупке долларов");
+//            System.out.println("0 - Выход");
+//            int command = scanner.nextInt();
+//            if (command == 1) {
+//                System.out.println("Если евро стоит меньше 90 рублей - покупайте!");
+//            } else if (command == 2) {
+//                System.out.println("Если доллар стоит меньше 75 рублей - покупайте!");
+//            } else if (command == 0) {
+//                System.out.println("Выход");
+//                return;
+//            }
+//        }
+        // Параметры, аргументы и сигнатура метода
+        // Task 1 of 2
+        // Метод findMax() сейчас может работать только с фиксированными значениями — 3 и 5. Исправьте код метода таким образом, чтобы он мог принимать два любых целых значения. Затем по аналогии вызовите метод, чтобы напечатать результат сравнения ещё двух пар чисел: 16 и 5, -1 и -7.
+        System.out.println("Наибольшее из чисел 3 и 5 = " + findMax(3, 5));
+        // Напишите аналогичный вызов метода findMax для таких пар чисел: 16 и 5, -1 и -7
+        System.out.println("Наибольшее из чисел 16 и 5 = " + findMax(16, 5));
+        System.out.println("Наибольшее из чисел -1 и -7 = " + findMax(-1,-7));
     }
-    public static void doCommand() {
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("Что вы хотите сделать?");
-            System.out.println("1 - Получить совет о покупке евро");
-            System.out.println("2 - Получить совет о покупке долларов");
-            System.out.println("0 - Выход");
-            int command = scanner.nextInt();
-            if (command == 1) {
-                System.out.println("Если евро стоит меньше 90 рублей - покупайте!");
-            } else if (command == 2) {
-                System.out.println("Если доллар стоит меньше 75 рублей - покупайте!");
-            } else if (command == 0) {
-                System.out.println("Выход");
-                return;
+        public static int findMax(int a, int b) {
+            if (a > b) {
+                return a;
             }
+            return b;
         }
-    }
 }
 
