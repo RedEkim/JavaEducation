@@ -699,50 +699,82 @@ public class ArrayTheme {
         //Рад познакомиться, <ваше имя> из <вашего города>!
         //У вас уже неплохо получается программировать!
 
-        System.out.println("Робот-помощник v2.0.");
-        // Вызовите ниже методы в правильном порядке
-        sayHello();
-        sayHelloByTime();
-        welcomeUserByName();
-        printSuccess();
-    }
+//        System.out.println("Робот-помощник v2.0.");
+//        // Вызовите ниже методы в правильном порядке
+//        sayHello();
+//        sayHelloByTime();
+//        welcomeUserByName();
+//        printSuccess();
+//    }
+//
+//    public static void welcomeUserByName() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Как вас зовут?");
+//        String name = scanner.nextLine();
+//        System.out.println("Из какого вы города?");
+//        String city = scanner.nextLine(); // Допишите чтение города
+//        System.out.println("Рад познакомиться, " + name + " из " + city + "!");
+//    }
+//
+//    public static void printSuccess() {
+//        System.out.println("У вас уже неплохо получается программировать!");
+//    }
+//
+//    public static void sayHello() {
+//        System.out.println("Привет!");
+//    } // Допишите метод sayHello(), который печатает: Привет!
+//
+//    public static void printCity() {
+//        System.out.println("Из какого вы города?");
+//    } // Допишите метод printCity(), который печатает: Из какого вы города?
+//
+//    public static void sayHelloByTime() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Который час?");
+//        int currentHour = scanner.nextInt();
+//        if (currentHour < 6) {
+//            System.out.println("Доброй ночи!");
+//        } else if (currentHour > 22) {
+//            System.out.println("Доброй ночи!");
+//        } else if (currentHour < 12) {
+//            System.out.println("Доброе утро!");
+//        } else if (currentHour < 18) {
+//            System.out.println("Добрый день!");
+//        } else {
+//            System.out.println("Добрый вечер!");
+//        }
+        // Возвращаем значение из метода
+        // Task
+        // Ниже вызовите новый метод
+//        String highestGrossingFilm = findHighestGrossingFilm();
+//        System.out.println("Самый кассовый фильм: " + highestGrossingFilm);
+//    }
+//    public static String findHighestGrossingFilm() {
+//        String film1 = "Титаник";
+//        int income1 = 2194;
+//
+//        String film2 = "Аватар";
+//        int income2 = 2810;
+//
+//        String film3 = "Тёмный рыцарь";
+//        int income3 = 1084;
+//
+//        // Допишите реализацию метода ниже
+//        if (income1 > income2) {
+//            if (income1 > income3) {
+//                return "Титаник";
+//            }
+//        } else if (income2 > income1) {
+//            if (income2 > income3) {
+//                return "Аватар";
+//            }
+//        } else if (income3 > income1) {
+//            if (income3 > income2) {
+//            }
+//        }
+//        return "Тёмный рыцарь";
+        // Особенности оператора return
 
-    public static void welcomeUserByName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Как вас зовут?");
-        String name = scanner.nextLine();
-        System.out.println("Из какого вы города?");
-        String city = scanner.nextLine(); // Допишите чтение города
-        System.out.println("Рад познакомиться, " + name + " из " + city + "!");
-    }
-
-    public static void printSuccess() {
-        System.out.println("У вас уже неплохо получается программировать!");
-    }
-
-    public static void sayHello() {
-        System.out.println("Привет!");
-    } // Допишите метод sayHello(), который печатает: Привет!
-
-    public static void printCity() {
-        System.out.println("Из какого вы города?");
-    } // Допишите метод printCity(), который печатает: Из какого вы города?
-
-    public static void sayHelloByTime() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Который час?");
-        int currentHour = scanner.nextInt();
-        if (currentHour < 6) {
-            System.out.println("Доброй ночи!");
-        } else if (currentHour > 22) {
-            System.out.println("Доброй ночи!");
-        } else if (currentHour < 12) {
-            System.out.println("Доброе утро!");
-        } else if (currentHour < 18) {
-            System.out.println("Добрый день!");
-        } else {
-            System.out.println("Добрый вечер!");
-        }
     }
 }
 
