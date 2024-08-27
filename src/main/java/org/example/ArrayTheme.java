@@ -814,19 +814,125 @@ public class ArrayTheme {
 //        }
         // Task 2 of 2
         // Объявите и реализуйте метод findMaxExpense — он должен находить в списке расходов за неделю самую большую трату и возвращать её значение. В качестве единственного параметра этого метода укажите массив расходов expenses.
-        double[] expenses = {1772.5, 367.0, 120.6, 2150.2, 874.0, 1.0, 1459.4};
-        double maxExpense = findMaxExpense(expenses); // Вызовите метод и присвойте maxExpense значение его результата
-        System.out.println("Самая большая трата недели " + maxExpense);
+//        double[] expenses = {1772.5, 367.0, 120.6, 2150.2, 874.0, 1.0, 1459.4};
+//        double maxExpense = findMaxExpense(expenses); // Вызовите метод и присвойте maxExpense значение его результата
+//        System.out.println("Самая большая трата недели " + maxExpense);
+//    }
+//    	public static double findMaxExpense(double[] expenses) {// Объявите метод findMaxExpense
+//            double maxExpense = 0;
+//            for(int i=0; i < expenses.length; i++) {// Реализуйте метод. Чтобы найти самую большую трату, воспользуйтесь циклом
+//            // Самую большую трату запишите в переменную maxExpense
+//            if(expenses[i] > maxExpense) {
+//                maxExpense = expenses[i];
+//            }
+//            }
+//            return maxExpense;
+//        }
+        // Task 1 of 2
+        // Кот Пиксель очень любит играть с мячиками — всего их у него 15. Днём он повсюду их прячет (число спрятанных мячиков считывается из консоли), но вечером всегда возвращает на место. Расставьте переменные balls и hiddenBalls в коде так, чтобы программа смогла правильно посчитать количество мячиков у Пикселя до начала игры, во время неё и в конце дня.
+//        int balls = 15; // Сохраните общее число мячиков Пикселя в переменной balls
+//        System.out.println("У Пикселя " + balls + " мячиков");
+//
+//		playPixel(balls); // Поиграйте с Пикселем, вызвав метод playPixel
+//
+//        // После игры Пиксель должен вернуть все мячики на место!
+//        System.out.println("Пиксель вернул все мячики");
+//        System.out.println("Их снова " + balls);
+//    }
+//    public static void playPixel(int balls) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Сколько мячиков он спрятал?");
+//        int hiddenBalls = scanner.nextInt(); // Сохраните количество мячиков, которые спрятал Пиксель, в переменную hiddenBalls
+//
+//        balls = balls - hiddenBalls; // Посчитайте, сколько у Пикселя осталось мячиков
+//        System.out.println("Осталось " + balls);
+        // Task 2 of 2
+        // Вам нужно дописать код приложения, которое анализирует финансовые планы пользователя и помогает скорректировать их. Программа считывает из консоли значения зарплаты, планируемых трат на транспорт и еду, а также сумму возможных сбережений. Эти значения сохраняются в соответствующих переменных. Метод correctExpenses сравнивает планируемые траты с зарплатой, печатает размер излишка или недостатка средств и выдаёт рекомендации.
+        //Объявите метод correctExpenses, который принимает значения переменных из главного метода в качестве аргументов. Дополните строки печати корректными значениями и исправьте ошибку в теле метода, связанную с видимостью одной из переменных.
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Какую зарплату вы получите в этом месяце?");
+//        int salary = scanner.nextInt();
+//        System.out.println("Сколько планируете потратить на транспорт?");
+//        int transportMoney = scanner.nextInt();
+//        System.out.println("Сколько запланировано на супермаркеты?");
+//        int foodMoney = scanner.nextInt();
+//        System.out.println("Какую сумму хотите отложить?");
+//        int savings = scanner.nextInt();
+//
+//        correctExpenses(salary, transportMoney, foodMoney, savings); // Вызовите метод correctExpenses с правильными аргументами
+//
+//        // Напечатайте запланированные траты
+//        System.out.println("Вы планировали потратить: транспорт — " + transportMoney + ", "
+//                + "еда — " + foodMoney + ", "
+//                + "сбережения — " + savings + ".");
+//    }
+//        public static void correctExpenses(int salary, int transportMoney, int foodMoney, int savings) { // Объявите метод correctExpenses
+//            // Тело метода дано ниже
+//
+//            int expensesSum = transportMoney + foodMoney + savings; // Считаем расходы
+//            int leftMoney = salary - expensesSum; // Считаем излишек средств
+//            if (expensesSum > salary) { // Проверяем, не превышают ли расходы зарплату
+//                int lackMoney = expensesSum - salary; // Считаем, сколько не хватает
+//
+//
+//                // Пока не начнёт хватать денег на транспорт — сокращаем траты на 100 рублей
+//                while ((salary - foodMoney) < transportMoney) {
+//                    foodMoney = foodMoney - 100;
+//                }
+//                // Если не хватает денег на жизнь — не откладываем
+//                if (transportMoney + foodMoney + savings > salary) {
+//                    savings = 0;
+//                }
+//
+//                // Печатаем рекомендации
+//                System.out.println("Придётся пересмотреть планы, вам не хватает " + lackMoney);
+//                System.out.println("Рекомендуемые траты: "
+//                        + "еда — " + foodMoney+", "
+//                        + "сбережения — " + savings +".");
+//            } else {
+//                System.out.println("В этом месяце дебет с кредитом сошлись!");
+//                System.out.println("Свободных средств " + leftMoney);
+//            }
+        // Task
+        // Прочитайте код. Сейчас программа анализирует расходы на корм одновременно для двух питомцев: кота Пикселя и хомяка Байта — из-за этого в результатах печати можно запутаться. Декомпозируйте код — разбейте его отдельные методы: sayHello, sayEnjoyMeal, findMaxExpense и findExpensesSum. Методы с приветствием и пожеланием приятного аппетита должны быть типа void; методы, касающиеся анализа трат, должны возвращать значение.
+        //У всех методов должны быть параметры. Внутри главного метода main(String[] args) должны остаться массивы с тратами, вызов методов и вывод результатов трат.
+        //Вызовите методы так, чтобы сначала была напечатана информация про Пикселя, а потом про Байта. Порядок вывода такой: сперва приветствие, затем стоимость самого дорогого корма и общие траты на него и только потом пожелание приятного аппетита.
+        double[] feedExpensesCat = {100.50, 236.0, 510.6, 150.20, 80.0, 172.0, 135.4};
+        double[] feedExpensesHamster = {70.50, 146.0, 710.6, 250.20, 83.0, 19.0, 55.4};
+
+        sayHello("Пиксель");
+        System.out.println("Твой самый дорогой корм стоил " + findMaxExpense(feedExpensesCat));
+        System.out.println("Всего на корм было потрачено " + findExpensesSum(feedExpensesCat));
+        sayEnjoyMeal("Пиксель");
+        sayHello("Байт");
+        System.out.println("Твой самый дорогой корм стоил " + findMaxExpense(feedExpensesHamster));
+        System.out.println("Всего на корм было потрачено " + findExpensesSum(feedExpensesHamster));
+        sayEnjoyMeal("Байт");
     }
-    	public static double findMaxExpense(double[] expenses) {// Объявите метод findMaxExpense
-            double maxExpense = 0;
-            for(int i=0; i < expenses.length; i++) {// Реализуйте метод. Чтобы найти самую большую трату, воспользуйтесь циклом
-            // Самую большую трату запишите в переменную maxExpense
-            if(expenses[i] > maxExpense) {
-                maxExpense = expenses[i];
+    public static void sayHello(String name) {
+        System.out.println("Привет, " + name + "!");
+    }
+
+    public static void sayEnjoyMeal(String name) {
+        System.out.println("Приятного аппетита, " + name + "!");
+    }
+
+    public static double findMaxExpense(double[] expenses) {
+        double maxFeedExpense = 0;
+        for (int i = 0; i < expenses.length; i++) {
+            if (expenses[i] > maxFeedExpense) {
+                maxFeedExpense = expenses[i];
             }
-            }
-            return maxExpense;
         }
+        return maxFeedExpense;
+    }
+
+    public static double findExpensesSum(double[] expenses) {
+        double sumFeed = 0;
+        for (int i = 0; i < expenses.length; i++) {
+            sumFeed = sumFeed + expenses[i];
+        }
+        return sumFeed;
+    }
 }
 
