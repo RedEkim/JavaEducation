@@ -6,13 +6,13 @@ public class Praktikum {
         double[] expenses = new double[7];
 
         Scanner scanner = new Scanner(System.in);
-        Converter converter = new Converter(78.5, 88.7, 0.75); // Вызовите конструктор с параметрами
-
         System.out.println("Сколько денег у вас осталось до зарплаты?");
         double moneyBeforeSalary = scanner.nextDouble();
-
         System.out.println("Сколько дней до зарплаты?");
         int daysBeforeSalary = scanner.nextInt();
+
+        Converter converter = new Converter(78.5,88.7,0.75);
+        DinnerAdvisor Advice = new DinnerAdvisor(); // Создайте объект класса DinnerAdvisor
 
         while (true) {
             printMenu();
@@ -24,7 +24,7 @@ public class Praktikum {
                 int currency = scanner.nextInt();
                 converter.convert(moneyBeforeSalary, currency);
             } else if (command == 2) {
-                getAdvice(moneyBeforeSalary, daysBeforeSalary);
+                Advice.getAdvice(moneyBeforeSalary, daysBeforeSalary); // Вызовите метод класса DinnerAdvisor
             } else if (command == 3) {
                 moneyBeforeSalary = saveExpense(scanner, moneyBeforeSalary, expenses);
             } else if (command == 4) {
@@ -78,29 +78,5 @@ public class Praktikum {
         System.out.println("4 - Показать траты за неделю");
         System.out.println("5 - Показать самую большую сумму расходов за неделю");
         System.out.println("0 - Выход");
-    }
-
-    public static void getAdvice(double moneyBeforeSalary, int daysBeforeSalary) {
-        if (moneyBeforeSalary < 3000) {
-            System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
-        } else if (moneyBeforeSalary < 10000) {
-            if (daysBeforeSalary < 10) {
-                System.out.println("Окей, пора в Макдак!");
-            } else {
-                System.out.println("Сегодня лучше поесть дома. Экономьте, и вы дотянете до зарплаты!");
-            }
-        } else if (moneyBeforeSalary < 30000) {
-            if (daysBeforeSalary < 10) {
-                System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
-            } else {
-                System.out.println("Окей, пора в Макдак!");
-            }
-        } else {
-            if (daysBeforeSalary < 10) {
-                System.out.println("Отлично! Заказывайте крабов!");
-            } else {
-                System.out.println("Неплохо! Прикупите долларов и зайдите поужинать в классное место. :)");
-            }
-        }
     }
 }
